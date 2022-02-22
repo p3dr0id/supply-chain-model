@@ -10,8 +10,8 @@ fornecedor = (1:1:num_elos) #cria vetor de 1 ao n° de osciladores com passo 1
 
 num_sim=1.0 #Define número médio de simulações para cálculo da média das medidas
 
-tf = 4.00 #Define tempo final de simulação
-dt=1 #Define intervalo entre pontos de tempo de simulação
+tf = 5.00 #Define tempo final de simulação
+dt=0.01 #Define intervalo entre pontos de tempo de simulação
 tspan=(0.0,tf)#Define vetor de tempo de simulação
 #println(typeof(tspan))
 #println(tspan)
@@ -68,6 +68,6 @@ println(yinit)
 prob = SDEProblem(f,g,yinit,tspan)
 sol = solve(prob,EM(),dt=dt)
 println(sol)
-# using Plots
-# p=plot(sol)
-# savefig(p,"cadeia.png")
+using Plots
+p=plot(sol)
+savefig(p,"cadeia.png")
