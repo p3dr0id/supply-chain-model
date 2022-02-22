@@ -1,1 +1,1 @@
-# supply-chain-model
+# Sequential Supply Chain Model
